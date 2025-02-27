@@ -1,0 +1,292 @@
+:root {
+    --space-blue: #0a192f;
+    --neon-cyan: #64ffda;
+    --star-white: #ccd6f6;
+    --deep-space: #020c1b;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--space-blue);
+    color: var(--star-white);
+    font-family: 'Courier New', monospace;
+    overflow: hidden; /* Prevent scrolling initially */
+}
+
+.hidden {
+    display: none !important; /*Important to override*/
+}
+
+/* Welcome Screen Styles */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative; /* For doodle boy positioning */
+}
+
+#welcome-text {
+    font-size: 3em;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden for typing effect */
+    position: relative;
+    top: 0;
+    transition: top 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.welcome-screen.transitioned #welcome-text {
+    top: -50px; /* Move upwards */
+    opacity: 1;    /* Visible */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.enter-button {
+    padding: 10px 20px;
+    background-color: var(--neon-cyan);
+    color: var(--deep-space);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: darken(var(--neon-cyan), 10%);
+}
+
+#doodle-boy {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#doodle-boy img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Portfolio Content Styles (adjust from your original CSS) */
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    padding: 2rem;
+    background: var(--deep-space);
+    border-right: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--neon-cyan);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 25px rgba(100, 255, 218, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid var(--neon-cyan);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--star-white);
+    transition: all 0.3s ease;
+    background: rgba(100, 255, 218, 0.05);
+}
+
+.social-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+}
+
+.social-btn i {
+    margin-right: 1rem;
+    font-size: 1.2em;
+    color: var(--neon-cyan);
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+}
+
+/* Header Section */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.stats-box {
+    padding: 1.5rem;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.stats-number {
+    font-size: 2rem;
+    color: var(--neon-cyan);
+    margin-top: 0.5rem;
+}
+
+.header-search {
+    flex: 0 1 300px;
+}
+
+.header-search input {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--deep-space);
+    border: 1px solid var(--neon-cyan);
+    color: var(--star-white);
+    border-radius: 4px;
+}
+
+
+/* Folder Navigation */
+.folder-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.folder-nav button {
+    padding: 10px 15px;
+    background-color: var(--deep-space);
+    color: var(--star-white);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.folder-nav button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.folder-nav i {
+    color: var(--neon-cyan);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 20px;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 5px;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: var(--deep-space);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.chat-log {
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    color: var(--star-white);
+}
+
+#chat-input {
+    width: 70%;
+    padding: 5px;
+    background-color: var(--space-blue);
+    color: var(--star-white);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 3px;
+}
+
+#chat-send {
+    width: 25%;
+    padding: 5px;
+    background-color: var(--neon-cyan);
+    color: var(--deep-space);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    }
+
+    .content-header {
+        flex-direction: column;
+    }
+
+    .stats-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
