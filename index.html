@@ -3,68 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metri Naveen Kumar</title>
+    <title>Metri Naveen - Universe</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <div class="profile-section">
-            <img src="https://avatars.githubusercontent.com/u/189886215?v=4" alt="Metri Naveen" class="profile-pic">
-            <h2>Metri Naveen Kumar</h2>
-            <p>AI Developer & Innovator</p>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="welcome-screen">
+        <h1>Welcome to My Universe</h1>
+    </div>
 
     <!-- Main Content -->
-    <main class="main-content">
-        
-        <!-- About Me -->
-        <section id="about" class="content-section">
-            <h2>About Me</h2>
-            <p>
-                I'm a passionate AI Developer exploring the vast universe of Artificial Intelligence, Machine Learning, and Space-Tech. 
-                My mission is to create intelligent systems that push the boundaries of technology.
-            </p>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="content-section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Regan AI</h3>
-                    <p>An advanced ML framework for deep learning research.</p>
-                    <span>Python</span> <span>TensorFlow</span> <span>PyTorch</span>
-                </div>
-                <div class="project-card">
-                    <h3>CosmoVision</h3>
-                    <p>A deep space image processing AI that enhances telescope data.</p>
-                    <span>Python</span> <span>OpenCV</span> <span>AI</span>
-                </div>
+    <div id="main-content" class="container hidden">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="profile-section">
+                <img src="https://avatars.githubusercontent.com/u/189886215?v=4" 
+                     alt="Metri Naveen" 
+                     class="profile-pic">
+                <h2>Metri Naveen Kumar</h2>
+                <p>AI Developer</p>
             </div>
-        </section>
 
-        <!-- Contact -->
-        <section id="contact" class="content-section">
-            <h2>Contact Me</h2>
-            <p>Connect with me through the links below:</p>
-            <div class="social-links">
-                <a href="https://github.com/metrinaveen08"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/metri-naveen-kumar/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.kaggle.com/metrinaveen"><i class="fab fa-kaggle"></i> Kaggle</a>
-            </div>
-        </section>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
 
-    </main>
+        <!-- Main Content Sections -->
+        <main class="main-content">
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <p>I'm an AI enthusiast passionate about machine learning, deep learning, and building futuristic tech.</p>
+            </section>
 
+            <section id="projects" class="content-section">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Regan AI</h3>
+                        <p>Advanced machine learning framework</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>PyTorch</span>
+                        </div>
+                    </div>
+                    <!-- Add more projects -->
+                </div>
+            </section>
+
+            <section id="contact" class="content-section">
+                <h2>Contact Me</h2>
+                <p>Email: <a href="mailto:metrinaveen@example.com">metrinaveen@example.com</a></p>
+                <div class="social-links">
+                    <a href="https://github.com/metrinaveen08"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/metri-naveen-kumar/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
