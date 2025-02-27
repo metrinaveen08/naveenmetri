@@ -3,10 +3,12 @@
     --neon-cyan: #64ffda;
     --star-white: #ccd6f6;
     --deep-space: #020c1b;
+    --transition: all 1s ease-in-out;
 }
 
 body {
     margin: 0;
+    padding: 0;
     background: var(--space-blue);
     color: var(--star-white);
     font-family: 'Courier New', monospace;
@@ -14,110 +16,105 @@ body {
 
 /* Welcome Screen */
 .welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     background: var(--space-blue);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
-    transition: opacity 1s ease;
-}
-
-#welcome-text {
-    font-size: 2.5em;
-    max-width: 50%;
+    font-size: 3em;
     color: var(--neon-cyan);
     text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid var(--neon-cyan);
-    animation: typing 3s steps(30, end) forwards, blink 0.6s infinite;
+    transition: var(--transition);
+    z-index: 100;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 50%; }
+/* Hide welcome screen */
+.welcome-screen.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+    pointer-events: none;
 }
 
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-button {
-    background: var(--neon-cyan);
-    color: var(--deep-space);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-button:hover {
-    background: #52e6c1;
-    transform: scale(1.1);
-}
-
-/* Portfolio Layout */
+/* Main Content */
 .container {
-    display: none;
-    grid-template-columns: 250px 1fr;
+    display: flex;
     min-height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+/* Show main content after welcome screen */
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Sidebar */
 .sidebar {
-    padding: 2rem;
+    width: 250px;
     background: var(--deep-space);
-    border-right: 1px solid rgba(100, 255, 218, 0.1);
-    text-align: center;
-}
-
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 3px solid var(--neon-cyan);
-    margin-bottom: 1rem;
-    box-shadow: 0 0 25px rgba(100, 255, 218, 0.3);
-}
-
-/* Main Content */
-.main-content {
     padding: 2rem;
+    border-right: 1px solid rgba(100, 255, 218, 0.1);
 }
 
-/* Stats */
-.stats-container {
-    display: flex;
-    gap: 1.5rem;
+.profile-section {
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-.stats-box {
-    background: var(--deep-space);
-    padding: 1.5rem;
-    border: 1px solid var(--neon-cyan);
-    border-radius: 8px;
-    text-align: center;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
 }
 
-.stats-number {
-    font-size: 2.5rem;
+/* Navigation */
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 1rem 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--star-white);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
     color: var(--neon-cyan);
 }
 
-/* Project Cards */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+/* Sections */
+.content-section {
+    background: var(--deep-space);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
 }
 
-.project-card {
-    background: var(--deep-space);
-    padding: 1.5rem;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    border-radius: 8px;
+/* Show sections smoothly */
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
