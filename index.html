@@ -3,55 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metri Naveen - Developer Portfolio</title>
+    <title>Metri Naveen Kumar</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="welcome-screen" class="welcome-screen">
-        <h1 id="welcome-text"></h1>
-        <button onclick="showPortfolio()">Enter Portfolio</button>
-    </div>
 
-    <div id="portfolio-content" class="container hidden">
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <div class="profile-section">
-                <img src="https://avatars.githubusercontent.com/u/189886215?v=4" alt="Metri Naveen" class="profile-pic">
-                <h2>Metri Naveen Kumar</h2>
-                <p>AI Developer</p>
-            </div>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="https://avatars.githubusercontent.com/u/189886215?v=4" alt="Metri Naveen" class="profile-pic">
+            <h2>Metri Naveen Kumar</h2>
+            <p>AI Developer & Innovator</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 
-            <div class="social-links">
-                <a href="https://github.com/metrinaveen08" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/metri-naveen-kumar/" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.kaggle.com/metrinaveen" class="social-btn"><i class="fab fa-kaggle"></i> Kaggle</a>
-            </div>
-        </nav>
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- About Me -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate AI Developer exploring the vast universe of Artificial Intelligence, Machine Learning, and Space-Tech. 
+                My mission is to create intelligent systems that push the boundaries of technology.
+            </p>
+        </section>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="content-header">
-                <div class="stats-container">
-                    <div class="stats-box"><h3>Projects</h3><div class="stats-number">14</div></div>
-                    <div class="stats-box"><h3>Stars</h3><div class="stats-number">248</div></div>
-                </div>
-                <div class="header-search">
-                    <input type="text" placeholder="Search projects...">
-                </div>
-            </header>
-
-            <section class="project-grid">
+        <!-- Projects -->
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <div class="project-grid">
                 <div class="project-card">
                     <h3>Regan AI</h3>
-                    <p>Advanced machine learning framework</p>
-                    <div class="tech-tags"><span>Python</span><span>TensorFlow</span><span>PyTorch</span></div>
+                    <p>An advanced ML framework for deep learning research.</p>
+                    <span>Python</span> <span>TensorFlow</span> <span>PyTorch</span>
                 </div>
-                <!-- Add more project cards -->
-            </section>
-        </main>
-    </div>
+                <div class="project-card">
+                    <h3>CosmoVision</h3>
+                    <p>A deep space image processing AI that enhances telescope data.</p>
+                    <span>Python</span> <span>OpenCV</span> <span>AI</span>
+                </div>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
+        <!-- Contact -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p>Connect with me through the links below:</p>
+            <div class="social-links">
+                <a href="https://github.com/metrinaveen08"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/metri-naveen-kumar/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.kaggle.com/metrinaveen"><i class="fab fa-kaggle"></i> Kaggle</a>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>
