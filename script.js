@@ -1,49 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const welcomeText = document.getElementById("welcome-text");
+document.addEventListener("DOMContentLoaded", () => {
     const welcomeScreen = document.getElementById("welcome-screen");
-    const portfolioContent = document.getElementById("portfolio-content");
+    const mainContent = document.getElementById("main-content");
 
-    // Typewriter Effect
-    const text = "Welcome to my Portfolio.";
-    let index = 0;
-
-    function typeWriter() {
-        if (index < text.length) {
-            welcomeText.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 100);
-        }
-    }
-
-    typeWriter();
-
-    // Show Portfolio
-    window.showPortfolio = function () {
-        welcomeScreen.style.opacity = '0';
+    setTimeout(() => {
+        welcomeScreen.classList.add("hidden");
         setTimeout(() => {
-            welcomeScreen.style.display = 'none';
-            portfolioContent.style.display = 'grid';
-            document.body.style.overflow = 'auto';
-            initParticles();
-        }, 1000);
-    };
-
-    // Particle.js Effect
-    function initParticles() {
-        const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
-        script.onload = function () {
-            particlesJS("portfolio-content", {
-                particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#64ffda" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true },
-                    size: { value: 3, random: true },
-                    move: { enable: true, speed: 1 }
-                }
-            });
-        };
-        document.body.appendChild(script);
-    }
+            mainContent.classList.add("visible");
+        }, 500);
+    }, 2000); // Show "Welcome to My Universe" for 2 seconds
 });
+
+// Smooth scrolling to sections
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('href').substring(1);
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// Section reveal on scroll
+const sections = document.querySelectorAll('.content-section');
+
+const revealOnScroll = () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 50) {
+            section.classList.add("visible");
+        }
+    });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
