@@ -3,74 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveen Metri - AI Visionary</title>
+    <title>Metri Naveen - AI Visionary</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --comic-orange: #FF6B00;
+            --star-dust: #FFA726;
+            --cosmic-black: #1A1A1A;
+        }
+
+        body {
+            background: linear-gradient(45deg, var(--cosmic-black) 0%, #2B1200 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background: rgba(255, 107, 0, 0.95);
+            box-shadow: 0 0 30px var(--comic-orange);
+            padding: 2rem;
+            width: 250px;
+        }
+
+        .profile-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--comic-orange);
+        }
+
+        .nav-links a {
+            color: white;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background: var(--star-dust);
+            transform: translateX(10px);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 3rem;
+        }
+
+        .content-section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid var(--comic-orange);
+        }
+
+        .hero-text {
+            font-size: 3rem;
+            text-shadow: 0 0 20px var(--comic-orange);
+            background: linear-gradient(to right, #FF6B00, #FFA726);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cosmic-footer {
+            background: rgba(255, 107, 0, 0.9);
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
-    <div id="particles"></div>
-    
     <div class="container">
         <nav class="sidebar">
             <div class="profile-section">
-                <div class="profile-pic-container">
-                    <img src="https://avatars.githubusercontent.com/u/189886215?v=4" 
-                         alt="Naveen Metri" 
-                         class="profile-pic">
-                </div>
-                
-                <div class="profile-info">
-                    <h2 class="profile-name">Naveen Metri</h2>
-                    <p class="profile-title">AI Developer & Researcher</p>
-                </div>
-
+                <img src="https://avatars.githubusercontent.com/u/189886215?v=4" 
+                     alt="Metri Naveen" 
+                     class="profile-pic" width="120">
+                <h2>Metri Naveen Kumar</h2>
+                <p>AI Architect & Future Shaper</p>
                 <div class="social-links">
-                    <a href="https://github.com/metrinaveen08" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/metri-naveen-kumar/" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+                    <a href="https://github.com/metrinaveen08"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/metri-naveen-kumar/"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Singularity Central</a></li>
-                <li><a href="about.html"><i class="fas fa-user-astronaut"></i> Cosmic Profile</a></li>
-                <li><a href="projects.html"><i class="fas fa-rocket"></i> Stellar Projects</a></li>
-                <li><a href="contact.html"><i class="fas fa-satellite"></i> Transmit Signal</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="projects.html"><i class="fas fa-rocket"></i> Projects</a></li>
+                <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
 
         <main class="main-content">
             <section class="content-section">
                 <h1 class="hero-text">Engineering Tomorrow's Intelligence</h1>
-                <p class="tagline">Bridging the gap between silicon and sentience</p>
-                
-                <div class="cyber-grid">
-                    <div class="cyber-card">
-                        <h3><i class="fas fa-brain-circuit"></i> Neural Architects</h3>
-                        <p>Designing self-evolving AI ecosystems</p>
-                    </div>
-                    <div class="cyber-card">
-                        <h3><i class="fas fa-code-pulse"></i> Code Alchemist</h3>
-                        <p>Transforming ideas into intelligent systems</p>
-                    </div>
-                </div>
-
-                <div class="mission-statement">
-                    <h2>Cosmic Mission</h2>
-                    <p>"To forge AI systems that don't just mimic intelligence,<br> 
-                    but cultivate digital consciousness through innovative architectures."</p>
-                </div>
+                <p>Bridging the gap between silicon and sentience</p>
             </section>
         </main>
     </div>
 
     <footer class="cosmic-footer">
-        <!-- Footer content from previous version -->
+        <p>© 2024 Metri Naveen Kumar - Transmitting from the Future since 2023 🚀</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
