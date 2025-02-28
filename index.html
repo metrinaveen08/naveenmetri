@@ -1,3 +1,4 @@
+/* index.html (Home Page) */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,64 +9,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Welcome Screen -->
     <div id="welcome-screen" class="welcome-screen">
         <h1>Welcome to My Universe</h1>
     </div>
-
-    <!-- Main Content -->
+    
     <div id="main-content" class="container hidden">
-        <!-- Sidebar -->
         <nav class="sidebar">
             <div class="profile-section">
-                <img src="https://avatars.githubusercontent.com/u/189886215?v=4" 
-                     alt="Metri Naveen" 
-                     class="profile-pic">
+                <img src="https://avatars.githubusercontent.com/u/189886215?v=4" alt="Metri Naveen" class="profile-pic">
                 <h2>Metri Naveen Kumar</h2>
                 <p>AI Developer</p>
             </div>
-
             <ul class="nav-links">
-                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
-                <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
-
-        <!-- Main Content Sections -->
-        <main class="main-content">
-            <section id="about" class="content-section">
-                <h2>About Me</h2>
-                <p>I'm an AI enthusiast passionate about machine learning, deep learning, and building futuristic tech.</p>
-            </section>
-
-            <section id="projects" class="content-section">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Regan AI</h3>
-                        <p>Advanced machine learning framework</p>
-                        <div class="tech-tags">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>PyTorch</span>
-                        </div>
-                    </div>
-                    <!-- Add more projects -->
-                </div>
-            </section>
-
-            <section id="contact" class="content-section">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:metrinaveen@example.com">chat@naveenmetri.me</a></p>
-                <div class="social-links">
-                    <a href="https://github.com/metrinaveen08"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/metri-naveen-kumar/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </section>
-        </main>
     </div>
+</body>
+</html>
 
-    <script src="script.js"></script>
+
+/* about.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h2>About Me</h2>
+    <p>I'm an AI enthusiast passionate about machine learning, deep learning, and building futuristic tech.</p>
+</body>
+</html>
+
+
+/* projects.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Regan AI</h3>
+            <p>Advanced machine learning framework</p>
+            <div class="tech-tags">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+/* contact.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:chat@naveenmetri.me">chat@naveenmetri.me</a></p>
+    <div class="social-links">
+        <a href="https://github.com/metrinaveen08">GitHub</a>
+        <a href="https://www.linkedin.com/in/metri-naveen-kumar/">LinkedIn</a>
+    </div>
 </body>
 </html>
