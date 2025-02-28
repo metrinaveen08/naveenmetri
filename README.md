@@ -23,7 +23,7 @@ This is the personal portfolio website of **Metri Naveen Kumar**, showcasing his
 ## Installation & Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/metrinaveen08/metrinaveen-website.git
+  git clone https://github.com/metrinaveen08/metrinaveen-website.git](https://github.com/metrinaveen08/naveenmetri.git)
    ```
 2. Navigate to the project folder:
    ```sh
