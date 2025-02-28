@@ -1,35 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const welcomeScreen = document.getElementById("welcome-screen");
-    const mainContent = document.getElementById("main-content");
+document.addEventListener("DOMContentLoaded", function() {
+    // Highlight the active page in the sidebar
+    let links = document.querySelectorAll(".nav-links a");
+    let currentUrl = window.location.pathname.split("/").pop(); 
 
-    setTimeout(() => {
-        welcomeScreen.classList.add("hidden");
-        setTimeout(() => {
-            mainContent.classList.add("visible");
-        }, 500);
-    }, 2000); // Show "Welcome to My Universe" for 2 seconds
-});
-
-// Smooth scrolling to sections
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute('href').substring(1);
-        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// Section reveal on scroll
-const sections = document.querySelectorAll('.content-section');
-
-const revealOnScroll = () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 50) {
-            section.classList.add("visible");
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentUrl) {
+            link.classList.add("active");
         }
     });
-};
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+    // Welcome screen fade effect (Only on index.html)
+    let welcomeScreen = document.getElementById("welcome-screen");
+    let mainContent = document.getElementById("main-content");
+
+    if (welcomeScreen && mainContent) {
+        setTimeout(() => {
+            welcomeScreen.style.display = "none";
+            mainContent.classList.remove("hidden");
+        }, 2000); // 2-second delay
+    }
+});
